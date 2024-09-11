@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    height: 55px;
+    box-shadow: 0 0 2;
+
+}
+
+#appdiv{
+    margin-bottom: 20px;
+}
+
+#logo{
+    font-size: 25px;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+li{
+    font-size: 17px;
+    font-weight: 600;
+}
