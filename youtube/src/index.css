@@ -1,68 +1,257 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(41, 42, 43);
-  color: white;
+  /* background-color: rgb(41, 42, 43);
+  color: white; */
 }
 
-#parent{
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 50px;
+body{
+  background-color: #292A2B;
+  color: white;
+
+  header{
+    background-color: #292A2B;
+    color: white;
+  }
+
   
 }
 
 
-#video{
+
+#parent {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px 0px;
+
+
+}
+
+
+#video {
   width: 60vw;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  video{
+
+  div{
+    #controls{
+      color: white;
+      background-color: rgb(24, 22, 22);
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 10px;
+      margin-top: -4px;
+
+      div{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input{
+          width: 80px;
+        }
+
+        p{
+          font-size: 17px;
+          border-radius: 50px;
+          cursor: pointer;
+          
+        }
+
+      }
+
+      
+    }
+  }
+  #author{
+    display: flex;
+    align-items: center;
+    img{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+  }
+
+  #comment{
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+    width: 80%;
+    img{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    div{
+        p{
+          font-size: 15px;
+          margin-bottom: 8px;
+        }
+    }
+
+  }
+
+  video {
     width: 100%;
-    border-radius: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  #time{
+    font-size: 13px;
+  }
+
+  #desc{
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    background-color: rgb(49, 48, 48);
+    padding: 13px;
+    text-align: justify;
+    line-height: 20px;
+    border-radius: 4px;
   }
 }
 
-#videolist{
+#videolist {
   width: 30vw;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  
 
-  div{
+
+  div {
     display: flex;
     cursor: pointer;
     gap: 20px;
 
-    img{
+    img {
       width: 40%;
       height: 95px;
       border-radius: 5px;
     }
 
-    div{
+    div {
       display: flex;
       flex-direction: column;
       gap: 5px;
 
-      h3{
+      h3 {
         font-size: 14px;
         font-weight: 400;
         font-family: system-ui;
       }
 
-      p{
+      p {
         font-size: 13px;
         font-weight: 300;
         font-family: system-ui;
       }
     }
 
-   
+
   }
+}
+
+
+
+
+
+
+
+
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px 10px 40px;
+  box-shadow: 0 0 2px rgb(250, 249, 249);
+
+  #lefts {
+
+    cursor: pointer;
+    gap: 6px;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+
+
+    div {
+
+      cursor: pointer;
+      gap: 6px;
+      width: 3vw;
+      display: flex;
+      flex-direction: column;
+
+
+      div {
+        background-color: white;
+        height: 2px;
+        width: 22px;
+        font-weight: 500;
+        font-family: system-ui;
+      }
+    }
+
+    h1{
+      font-size: 22px;
+      font-weight: 600;
+      margin-left: 20px;
+      padding: 0;
+      font-family: system-ui;
+    }
+  }
+
+
+  #search{
+    width: 50vw;
+
+    input{
+      padding: 5px 10px;
+      height: 28px;
+      width: 400px;
+      margin-left: -100px;
+      background-color: rgb(41, 42, 43);
+      border: 1px solid rgb(107, 103, 103);
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      font-size: 14px;
+      font-family: system-ui;
+    }
+
+    button{
+      height: 28px;
+      margin-left: -1px;
+      padding: 0px 20px;
+      background-color:transparent;
+      border: 1px solid rgb(107, 103, 103);;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: system-ui;
+    }
+  }
+
+  
+  #theme{
+    font-size: 20px;
+    cursor: pointer;
+  }
+
 }

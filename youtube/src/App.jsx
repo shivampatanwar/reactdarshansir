@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import VideoPlayer from './VideoPlayer'
 import JSON from './video.json'
+import Nav from './Nav'
 
 const App = () => {
 
@@ -12,8 +13,10 @@ const App = () => {
     setPlay(datas);
   }
 
+
   return (
     <div>
+      <Nav/>
       <VideoPlayer data={data}  play={play} handlePlay={handlePlay} />
     </div>
   )
