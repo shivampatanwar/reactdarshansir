@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import Fbc from './Fbc/Fbc'
 import Toggle from './Fbc/Toggle'
+import Form from './FormPrint/Form'
 
 
 function App() {
 
   return (
     <div>
-      <Fbc/>
+      {/* <Fbc/>
       <br />
       <br />
-      <Toggle/>
+      <Toggle/> */}
+      <Form/>
       
     </div>
   )

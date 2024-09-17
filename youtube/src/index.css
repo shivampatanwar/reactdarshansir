@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(41, 42, 43);
+  color: white;
+}
+
+#parent{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  
+}
+
+
+#video{
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  video{
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+#videolist{
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  
+
+  div{
+    display: flex;
+    cursor: pointer;
+    gap: 20px;
+
+    img{
+      width: 40%;
+      height: 95px;
+      border-radius: 5px;
+    }
+
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      h3{
+        font-size: 14px;
+        font-weight: 400;
+        font-family: system-ui;
+      }
+
+      p{
+        font-size: 13px;
+        font-weight: 300;
+        font-family: system-ui;
+      }
+    }
+
+   
+  }
+}
