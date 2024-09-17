@@ -1,11 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import IMG from '../public/img.png'
 
 const VideoPlayer = ({ data, play, handlePlay }) => {
 
 
-    let video = useRef(null);
+    let video = useRef();
     let vplay = useRef();
+
+    useEffect(()=>{
+        video.current.play();
+    })
 
     const [volume, setVolume] = useState(1);
 
@@ -41,12 +45,12 @@ const VideoPlayer = ({ data, play, handlePlay }) => {
         <div id='parent'>
             <section id='video'>
                 <div>
-                    <video autoPlay ref={video} src={play.videoUrl} controls ></video>
+                    <video ref={video} src={play.videoUrl} controls ></video>
                     <div id='controls'>
                         <div>
                             <p ref={vplay} onClick={playPause}>&#9658;</p>
                             <p></p>
-                            <input type="range" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} />
+                            <input type="range" min="0" max="1" step="0.1" value={volume} onChange={handleVolumeChange} />
                         </div>
                         <div>
                             <p onClick={fullScreen}> &#x26F6;</p>
