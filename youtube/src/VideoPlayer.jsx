@@ -41,7 +41,7 @@ const VideoPlayer = ({ data, play, handlePlay }) => {
         <div id='parent'>
             <section id='video'>
                 <div>
-                    <video autoPlay ref={video} src={play.videoUrl}  controls ></video>
+                    <video autoPlay ref={video} src={play.videoUrl} controls ></video>
                     <div id='controls'>
                         <div>
                             <p ref={vplay} onClick={playPause}>&#9658;</p>

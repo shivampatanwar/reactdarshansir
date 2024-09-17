@@ -6,19 +6,24 @@ const Nav = () => {
 
     let themes = () => {
         // theme.current.innerHTML = theme.current.innerHTML === '&#9728;'? '&#9789;':'&#9728;';
-        console.log(theme.current.innerHTML);
+        // console.log(theme.current.innerHTML);
 
-        if (theme.current.innerHTML == '☀') {
-            theme.current.innerHTML = '&#9789;';
-            document.body.style.backgroundColor = "white";
-            document.getElementById('desc').style.backgroundColor ="white"
-            document.body.style.color = "black";
-        } else {
-            theme.current.innerHTML = '&#9728;';
-            document.getElementById('desc').style.backgroundColor ="black";
-            document.body.style.backgroundColor = "#292A2B";
-            document.body.style.color = "white";
-        }
+        document.body.style.backgroundColor = theme.current.innerHTML == '☀'? 'white':'#292A2B';
+        document.getElementById('desc').style.backgroundColor = theme.current.innerHTML == '☀'? 'white':'black';
+        document.body.style.color = theme.current.innerHTML == '☀'? 'black':'white';
+        theme.current.innerHTML = theme.current.innerHTML == '☀'? '&#9789;':'&#9728;';
+
+        // if (theme.current.innerHTML == '☀') {
+        //     theme.current.innerHTML = '&#9789;';
+        //     document.body.style.backgroundColor = "white";
+        //     document.getElementById('desc').style.backgroundColor ="white"
+        //     document.body.style.color = "black";
+        // } else {
+        //     theme.current.innerHTML = '&#9728;';
+        //     document.getElementById('desc').style.backgroundColor ="black";
+        //     document.body.style.backgroundColor = "#292A2B";
+        //     document.body.style.color = "white";
+        // }
     }
 
 
