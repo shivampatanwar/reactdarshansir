@@ -20,6 +20,7 @@ function App() {
     let { name, value } = e.target;
     console.log(e.target.name, e.target.value)
 
+    formData 
     // setFormData({
     //   ...formData,
     //   [name]: value
