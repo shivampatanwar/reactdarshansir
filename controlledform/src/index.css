@@ -1,25 +1,79 @@
-form{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3 );
+  width: 35%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
-  
+
 }
 
-input{
-  margin: 5px  0px 15px 0px;
-  padding: 5px 10px;
-}
-
-button{
-  padding: 5px 10px;
-}
-
-#div{
+#output {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
+  flex-direction: column;
+  width: 35%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  gap: 20px;
+
+  div {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    height: 50%;
+  }
+
+  h3,
+  p {
+    margin: 10px 0px;
+  }
+
+  p {
+    margin: 10px 20px;
+  }
+
+}
+
+#radiodiv{
+  margin-top: 10px;
+}
+
+
+.label {
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+input {
+  margin: 5px 0px 15px 0px;
+  padding: 5px 10px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+#div {
+  display: flex;
+  justify-content: space-evenly;
+  height: 98vh;
+  padding-top: 15px;
+
+}
+
+#cbdiv {
+  margin-top: 10px;
+
+  div {
+    label {
+      margin-left: 10px;
+      font-size: 13px;
+    }
+  }
 }
