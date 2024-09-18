@@ -62,8 +62,9 @@ function App() {
 
   let handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
 
+    // Display form data on submit into ui using ref
     view.current.innerHTML = `
       <h3>Form Data OnSubmit</h3>
       <p>Name : ${name}</p>
@@ -74,9 +75,6 @@ function App() {
       <p>Password : ${password}</p>
       <p>Courses : ${courses.join(', ')}</p>
     `;
-
-    // Reset form checkboxes and radio buttons
-    // e.target.reset();
 
     // set form default data
     setFormData({
