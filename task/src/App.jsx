@@ -43,7 +43,7 @@ const App = () => {
       <div id="outer2">
         <Button1 />
         <div id="output"></div>
-        <div id="inner">
+        <div id="inner1">
           <Box1 />
           <Box2 />
         </div>

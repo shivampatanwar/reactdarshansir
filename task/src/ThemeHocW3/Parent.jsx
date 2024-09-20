@@ -11,15 +11,15 @@ const Parent = (Wrap) => {
             let div2 =document.getElementById("div2");
             let button = document.getElementById("button");
 
-            button.innerHTML = button.innerHTML === 'Light'? 'Dark' : 'Light';
+            button.innerHTML = button.innerHTML === 'Light ☀'? 'Dark ☽' : 'Light ☀';
 
             // for div1
-            button.innerHTML === 'Light'? div1.style.backgroundColor="#515653" : div1.style.backgroundColor="white";
-            button.innerHTML === 'Light'? div1.style.color="white" : div1.style.color="#515653";
+            button.innerHTML === 'Light ☀'? div1.style.backgroundColor="#515653" : div1.style.backgroundColor="white";
+            button.innerHTML === 'Light ☀'? div1.style.color="white" : div1.style.color="#515653";
             
             // for div2
-            button.innerHTML === 'Light'? div2.style.backgroundColor="#515653" : div2.style.backgroundColor="white";
-            button.innerHTML === 'Light'? div2.style.color="white" : div2.style.color="#515653";
+            button.innerHTML === 'Light ☀'? div2.style.backgroundColor="#515653" : div2.style.backgroundColor="white";
+            button.innerHTML === 'Light ☀'? div2.style.color="white" : div2.style.color="#515653";
             
         }
 
@@ -31,14 +31,15 @@ const Parent = (Wrap) => {
 
             let button = document.getElementById("button1");
 
-            button.innerHTML = button.innerHTML === 'Light'? 'Dark' : 'Light';
+
+            button.innerHTML = button.innerHTML === 'Light ☀'? 'Dark ☽' : 'Light ☀';
 
             bg==='white' ? setBg('#515653') : setBg('white');
             color==='#515653'? setColor('white') : setColor('#515653');
 
+
             
-            
-            document.getElementById('output').innerHTML = `Color: ${color}, Bg: ${bg}`;
+            document.getElementById('output').innerHTML = `Color: ${color=='#515653'?'black':color}, BackgroundColor: ${bg==='#515653'?'black':bg}`;
 
             // document.getElementById('outer2').style.backgroundColor = bg;
             // document.getElementById('outer2').style.color = bg;
