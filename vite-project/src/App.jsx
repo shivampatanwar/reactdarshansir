@@ -168,16 +168,34 @@
 
 
 
+// import React from 'react'
+// import FormPrompt from './Task/FormPrompt';
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FormPrompt/>
+//     </div>
+//   )
+// }
+
+
+
 import React from 'react'
-import FormPrompt from './Task/FormPrompt';
+import Child1 from './Hoc/Child1';
+import Child2 from './Hoc/Child2';
+import Child3 from './Hoc/Child3';
 
 const App = () => {
   return (
     <div>
-      <FormPrompt/>
+      <Child1/>
+      <Child2/>
+      <Child3/>
     </div>
   )
 }
+
 
 
 export default App;

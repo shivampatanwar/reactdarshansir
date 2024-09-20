@@ -77,3 +77,27 @@ button {
     }
   }
 }
+
+
+#table{
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+
+  table{
+    border-radius: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+
+    th, td{
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    th{
+      background-color: aqua;
+    }
+  }
+}
