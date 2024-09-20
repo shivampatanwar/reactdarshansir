@@ -185,6 +185,9 @@ import React from 'react'
 import Child1 from './Hoc/Child1';
 import Child2 from './Hoc/Child2';
 import Child3 from './Hoc/Child3';
+import Child4 from './Hoc/Child4';
+
+// Higher Order Components (HOC)
 
 const App = () => {
   return (
@@ -192,11 +195,10 @@ const App = () => {
       <Child1/>
       <Child2/>
       <Child3/>
+      <Child4/>
     </div>
   )
 }
-
-
 
 export default App;
 

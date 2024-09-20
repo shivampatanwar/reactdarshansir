@@ -1,11 +1,13 @@
 import React from 'react'
+import Parent from './Parent'
 
-const Child2 = () => {
+const Child2 = (props) => {
+
   return (
     <div>
-      
+       <h1>{props.data.email}</h1>
     </div>
   )
 }
 
-export default Child2
+export default Parent(Child2)
