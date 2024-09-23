@@ -181,25 +181,43 @@
 
 
 
-import React from 'react'
-import Child1 from './Hoc/Child1';
-import Child2 from './Hoc/Child2';
-import Child3 from './Hoc/Child3';
-import Child4 from './Hoc/Child4';
+// import React from 'react'
+// import Child1 from './Hoc/Child1';
+// import Child2 from './Hoc/Child2';
+// import Child3 from './Hoc/Child3';
+// import Child4 from './Hoc/Child4';
 
-// Higher Order Components (HOC)
+// // Higher Order Components (HOC)
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Child1/>
+//       <Child2/>
+//       <Child3/>
+//       <Child4/>
+//     </div>
+//   )
+// }
+
+import React from 'react'
+import MyContext from './CONTEXTAPI/MyContext'
+import Children1 from './CONTEXTAPI/Children1'
+import Children2 from './CONTEXTAPI/Children2'
+
 
 const App = () => {
   return (
     <div>
-      <Child1/>
-      <Child2/>
-      <Child3/>
-      <Child4/>
+      <MyContext>
+        <Children1 />
+        <Children2 />
+      </MyContext>
     </div>
   )
 }
 
-export default App;
+export default App
+
 
 

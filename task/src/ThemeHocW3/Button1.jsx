@@ -1,5 +1,5 @@
 import React from 'react'
-import Parent from './Parent'
+import Parent1 from './Parent1'
 
 
 const Button1 = (props) => {
@@ -10,4 +10,4 @@ const Button1 = (props) => {
   )
 }
 
-export default Parent(Button1)
+export default Parent1(Button1)

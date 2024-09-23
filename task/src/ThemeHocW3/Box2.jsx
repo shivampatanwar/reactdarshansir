@@ -1,5 +1,5 @@
 import React from 'react'
-import Parent from './Parent'
+import Parent1 from './Parent1'
 
 const Box2 = (props) => {
 
@@ -13,4 +13,4 @@ const Box2 = (props) => {
   )
 }
 
-export default Parent(Box2)
+export default Parent1(Box2)

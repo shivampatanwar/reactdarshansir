@@ -1,4 +1,4 @@
-
+/* 
 
 *{
     margin: 0;
@@ -68,4 +68,39 @@
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0, 0, 0.3);
     border-radius: 5px;
+}
+
+
+@media screen and (max-width: 800px) {
+    #out{
+        flex-direction: column;
+    }
+
+    #outer, #outer2{
+        width: 70%;
+        height: 500px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    #out{
+        flex-direction: column;
+    }
+
+    #outer, #outer2{
+        width: 90%;
+        height: 500px;
+    }
+    
+} */
+
+
+
+
+
+#div1{
+    width: 300px;
+    height: 300px;
+    border: 2px solid red;
 }

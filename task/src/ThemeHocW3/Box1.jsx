@@ -1,7 +1,9 @@
-import React from 'react'
-import Parent from './Parent'
+import React, { useContext } from 'react'
+import Parent1 from './Parent1'
 
 const Box1 = (props) => {
+
+  // const{ value }= useContext()
 
 
   return (
@@ -13,4 +15,4 @@ const Box1 = (props) => {
   )
 }
 
-export default Parent(Box1)
+export default Parent1(Box1)
