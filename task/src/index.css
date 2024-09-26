@@ -96,11 +96,59 @@
 } */
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+#parent{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 100px;
+}
 
+#button{
+    padding: 5px 10px;
+    background-color: teal;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 35px;
+}
+
+#div1, #div2, #div3, #div4{
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid red; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #div1{
-    width: 300px;
-    height: 300px;
-    border: 2px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#div2{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#div3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#div4{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

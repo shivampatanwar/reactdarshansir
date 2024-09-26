@@ -56,15 +56,21 @@
 // };
 
 import React from 'react'
-import ThemeChanger from './ThemeChangeContaxt/ThemeChanger'
-import Container1 from './ThemeChangeContaxt/Container1'
+import ThemeChanger from './ThemeChangeContaxt1/ThemeChanger'
+import Container1 from './ThemeChangeContaxt1/Container1'
+import Container2 from './ThemeChangeContaxt1/Container2'
+import Container3 from './ThemeChangeContaxt1/Container3'
+import Container4 from './ThemeChangeContaxt1/Container4'
 
 
 const App = () => {
   return (
-    <div>
-      <ThemeChanger>
+    <div id='parent'>
+      <ThemeChanger >
         <Container1/>
+        <Container2/>
+        <Container3/>
+        <Container4/>
       </ThemeChanger>
     </div>
   )

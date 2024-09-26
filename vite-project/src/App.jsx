@@ -200,24 +200,38 @@
 //   )
 // }
 
-import React from 'react'
-import MyContext from './CONTEXTAPI/MyContext'
-import Children1 from './CONTEXTAPI/Children1'
-import Children2 from './CONTEXTAPI/Children2'
+// import React from 'react'
+// import MyContext from './CONTEXTAPI/MyContext'
+// import Children1 from './CONTEXTAPI/Children1'
+// import Children2 from './CONTEXTAPI/Children2'
 
+
+// const App = () => {
+//   return (
+//     <div>
+//       <MyContext>
+//         <Children1 />
+//         <Children2 />
+//       </MyContext>
+//     </div>
+//   )
+// }
+
+
+
+import React from 'react'
+import Lifecycle from './LifeCycle/Lifecycle'
 
 const App = () => {
   return (
     <div>
-      <MyContext>
-        <Children1 />
-        <Children2 />
-      </MyContext>
+      <Lifecycle/>
     </div>
   )
 }
 
 export default App
+
 
 
 

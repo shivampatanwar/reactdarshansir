@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// const App = () => {
+//   const [image, setImage] = React.useState([
+//     {
+//       id: 1,
+//       src: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA8gMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EADoQAAEDAwIEAwUGBQQDAAAAAAEAAgMEESESMQUTQVEiYXEUMoGRoQZCUmKxwRUjktHwM1Ny4SRD8f/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACIRAAICAwEAAQUBAAAAAAAAAAABAhEDITESUQQTIjJBQv/aAAwDAQACEQMRAD8A+SNCI24Q2OCO2xVTz5F2Svb1TMdY9vVLhqsGIUiMkjTh4j+ILQp62J9tl57QrAFpwkeNMk4RZ7CMxPAIIXfZ2nZeWiqpY/dcU9T8Xlj97KjLC/4ReP4Nl1J5IbqM2vpXKXjMbrB4F1rU9VTzN94KT9RJv0jDkpPJAfSeS9UaeN4uC1Bfw/sAVllMp/J5V9LjZAfTnsvUS0JA91JyUZ/CqLKOpnnXQ23CGW23C25qUj7pSklMeysppjqRnFoOFUxJx0JHRU0dwnTG9Cbo0JzE+WgoLmI2PGYi5iGWJ10aE5iJZTFS1VAyjuaqhuViqkVDMLjmplrPCoY8ICqYk4KhTMjEFwwsWjKwSrZXXFitlLLqll1AJcEhXY8hDCsBhUokxhk1t0zFKw7lIAKwuNkfJGUEzYjs5FDAsmKdzDunYawH3krizmnjkuDXJucLhpyNgrxTMfs5MxvHVLtEbaEeUR0RI5JIz4XELQbHG/1VjR3F7JXJcZmylNxeeE5cSFtUX2gjcQ2Q2WC+lPQIToXNNwEkscJCNJnvoKmlqALOGUZ9FG8XaQV8/gqpoXXDitai47NG6znGwXNPA1wm40bdTw0jos2eic37q1KTjkUtta0miCqHhLUlyj0ytHjJaQ9kpLSnoF7Wq4XfLAPgsuooHNvdqpHJQ3v5PJSwlvRLkW6L0NVS4OFlS0xBJyuiM7KJ2Ilt1R0aYcwhc03VBkxF8aEWWK0nR3QJIvJFMrHIBZbayLowqWLTsjwEHBSsDf8ARSWNJysstl0d0nWQ2bdBSKY8m6Muy4rELhCod1lVF1RANlgFYBdGy6ArpEWyBWCllYBNQrZOigCsugI0LZGuI2KYjq5B1KBZdsg4piNJ9NKGvI3WlTcSYLBxXmwMqwcR1SvEmTliT4exjlhlF9QVn07XDBXk4qqWM3a4rRpuMvbYPyFzywNcIyxNcNGSiIGyWfC9h2T1NxSCcBriAU3y45R4CCptyj0k7XTFa9zO4Wjw/ib4nWLirzUJ7JGSkkabgWS/jLptM9zwniPPFjmy2DSxzN2C8BwCuNLVBkpwTbK+hxPZoa9jgR5LjyRcZC18nneM8NMTS5rbLzM8Vriy+i8VMctIb2v0XiKmManYT45BWmYU0O5sgcnyWnNHuhNZ5LqUtDpifJ8kN8J7LT5Sq6HyQ9hMaSA22QNDozhbMkGEq+A5TqdjKQKmcJDYhWrqe8BNsBVhZy6kjotGtjtQucRuFOcqkgXUkzxjxkqpRXjxFDK6j1IsqouqIDBQF0BdsrgLpSItnAFYBdAVrJkhGyoCtZWAXbJqFsrZSyuAu2RoWyllLImlSy1GsHZSyvZSyFGsq0lpu05TlNxKopyCHJWylkrgn0Dp9PT0PH432bOLea2oTTVTPBpXz6yZpayopnXieQO3RcuT6RPcSMsKfD2FTwzOuPpsmeH8VqaNwjn8TNrrBo/tPIwBtQy47ha1PX0VaMuAcehXJPFNL8kRlCS6eoE7ayL+XLuNlkz0Tg52pAhhlp3cynkuOyY9vkyJmZ8lzNNPRJmdV02ht0k2NbVaObAHMtkbLAlL4pM5sr47aKQ4NtiRmUupLcPrGmVjZcA4uV6hjabSHNLTcb3U8lxYJWjzU1NpBKSfDi/Yr0deyMMFslZMobpsN0IyDFsyKqG0rXhN1zOZwq/YLlSMABMxNE1C6LqE0pcY0nxnh52WcfVLELa4nSGJ5uDush7bFd8ZekehinaBKLqiYuMgBEDbqBp7ZRAC22oEXXUjndlRGVbQeyNGO2T2Ro43SYawk9gLpkLsUDVbSmpKWWNoe+J7Wu2JG6py+2UyEdgdKtoRgz59l3QjQtgNKhamOWuaEaNYDSuaUxoU0LUaxfSuaUxoXNCFGsBpV2suEQMTEUVxslaMmJlmMhQNLctJCddCey4ID2U9MbRal4tW0xAZKS0dCtyk+0sclmVkVvzBYPIJOy6KY9QozxY5dROUYs9nBNRVmIJwCel1yp4S52W5B6hePbA9uWktI6jCdpOMcQocNlL2fhdkLkl9K0/wYjw/DHpeHOYcNOEHXU09w1zrdrp+j+0tLUO0VkYYe4GFpupqarj1wOa9p7KMnKH7oTa6jy7+JVDffylpeIOd7wW9WcIIvpbdYNZRmInU0hVxvHLg8fLO00nOdk9VqwRujZdq83HI6GQFpwteHiOuGxNihmxP/IJxLcTjZLFdwAIXkqpoDzpW3XVOptgSsOc3ddPgg0tl8CaFrFdXVF00dg7HE+pmuDg2s7YNC1I4JSwRyPY9p62yFhvqZGjxatQA97J9VqcHq3PjZHNM9mdWq1wUikVlHR6SgoKeJgcwkk5dcpyWhimMbWwB+clzyNPayRhkIOlvit95PROlk8N7NtmxV09EtoXrOHFkWqWtY3SSSHe7btb91hPloWzNaXuuTkR7BehNLHLdkl7H73X4dgs93AnSueRUeMZB0WFr427INtcDSf7GRXVtK2drKWI26kX287/9JjkkRskIOh4Ja62Hei9G3hodEzmtjMobZ1xqDnbFxB72Holq7h0cVPAYQ1t3NuxoNn5zjYY/VNCco7Yk4RktGLy87Y9F0R3TXEjTRVckcEnKbF/qeHUR6EkfogcMkbPE/wBoka19w5hlOi7Xe6qrNAk8MqKcryXDEUyJGNE7pY5WsieWcwMJafijctjxeN4It9U6yRZN45Lpn8vyXOVutOOjkkBLQLDc3wEy7hE8VO99RG5t/wDTscuG9xutKaiaOOUjGZAS4ADJ2WrQcOM9QKdrmmU/c67X/RAnZVVEzoqal0yCJzneCxuDi+cG3TzWdwb+I0/E6WugaW8iXwB19JcN79/NcmTK5LRV/TNrp6k/ZmoLsxkYuifwGKJl6iVkf/Iqcb4txKWpb/5LmRy+JgYQMYuD81muYS3VK4ucc+IkqUYZZK5M45QcXTHxScLZvUsPoE3Bwzh05AjqGE/JYbAOlreQWjRPiD2h+PNJkxzitMVxo1T9lxI28disLi/AZKZhcY8L33Aa2Nv8hztTd2n9ln/a6rEkRghjtf7zguKGfIp0ZNo+WviLdkSlqJqV14ZHN9CnZ4LApblZ2XqWmtnRpo9HwzjnOAjrB4h97omuMUcUkPMjALT1XlortNytam4hoopInuuCMA9CvPyYfEvUCEoU7R52upzE4pBzizYra4lIHt6XWNKF2w2tl4psXe9ztygvF0ZzUNwVNIrHQKyivZRAextvC5iTpmwbXwb2RjTNpf5bZHO0OzY/RaETiCdBBAGyq2EOAuRcm7iUnlHQ5Nj1O9uiN0bf5YFi3qABsn9QEbtAyRhIxGONgY1xIAtcHr3RYJLMLXvubEAjeyomIxp2sMbYOzdpsc53/dGp762udraZHXaegt3/AM6FKidgcxz3OsPwtJP0TENQ1zg69m6fe2z2RAc9r8Yl1PGnwEHvqf8A9Jmmqn62XeQdbQWm19/7EJeN7iWNvgt8djsb/wBv0RwY9YaQCxviLiNz2/zyWBYJhoakaKiiie2MusDGB1N10RUEdI9sVHAHHxuIbYuN/EfJcDSZJCLZyD3TUBa24k0k4yN1tDWZvEOGGf8Ak0kojhpWnlsIJJyb5v3P0R+D/ZypbqL6ksEudTdx1+eVoCQCeR2sEHAH6J2Otp449JeDa5x1QUV0zkzklPR0MEEcUet8TuYHE2yDue/xWRUMquISPaXG7nNDnB2nQL5+n1Wk2roHSOknqQ1x6vcBb/4ix1nCg4llXTm4s48wXWB6PNse+r+0cgpNdmC7pQTbTcYPfy+BW1UR81scTmtGi7gRgas729VeCTh8Mz+XUUoYc+EgHr+t0CaphkkbqqIXBrvea8XLeoI+KCSD6s8vxWuniqJGTQFszXjZxsbA7X973j5L0FRJSvoIWtcPaHW8I6W3/VMuq6GVnKqaqmkaHGz3vbcDok6r+G1VGKSqq6URsvy3wzNDhnfKFU7snkjGYs6NzUF8jmHw7jyTJkoY7NPEqUgYuZWgn1F1WSXh1vDxGm9NYVG00c6g+Ej4/WwN0xEN9ECTi1RPqdM57je+DhQy8PuA6sgGL31Aj6ILpqbQS2oiJHQOx/nwXP4hZvtgJJ5CctCpzXndoUknhZ/7Ivg8FBNXD+Nv9SpoaqCGQ9lR0rrbILqqPo9v9SG6pYfvN+a2g0gkpLveSz2grj6gdHBAdOOrx81rQyRdzR2QXNCq6UfjHzQzL+YLWMol7KIXN/MFELDRG8XqPxD0ARWcTqSMvjZ62JWECVbV5lR9M7fKPQHir2MJMgLu4AygDjc/V7h6WWPfGLrtyt6ZvKNk8ZqS27auS42BYFRvGK3czOJWULq7HWJHUrembyjbpuP1Gea8X6Eov8enc9oGmxwSAcLz/mUVsjWA4Jv16rembwjeNa6pY5v8UbC8C9g12fLZZ5qXNeWmsleOmXfLdIg2I02LtxnZX0zVUhLIi+R3RmUfTB4SGJHTtAu55a4Xac5VYKoxPJLGS/leLhHpeG1bzd1M7GBqJGewsm2cLmYWyVdO0MA/0mu8Tj2xhbYGojHD+IU8xEYZHE84ALQAT5LRaegsbdmrG4lLSS0rQynbTzRnLCLagkoCNdjJKxh2LCT+6f3WhPtp7PRsmPMLRG1wHcKzpomi74wwd9VgsK+qblNlllYerSW3+a1Kh81LDF7ZRNlB+8S0kfKwC3oR4wh4jSj3KloPwP7KGailb/NmY4n7wA/eyDBVcLqpNEkbYrgDMe59UeKKKAAygNidcaw0PafismxXjRx0NJCbSvMQORqaMj5IUjOHAYqL/wDEBPNeymI9khp3xn3+W2zrd7dU66lo3xtdUwQAu64F03RHCJ5oyUQOJCLdnNKLE2KoaTFI9/Qgtz+qJxWChbOY4oBYC5dzdIugN4NGXNIkcwdC0gqbiN9mNFJaVw3En9BQ2UzCcvd6WsU47htYy3s1VLI07EAG3qbhITv4lTuIdK42Nrg7/stwCwsK6mYzJBt5k/2Qn05c48vA83XQ5qjiBtrLnDtgoL6yra2ztj+UIMZYGEZFztXJcH6d8IclNM3Ib9QlWB7COWdF+rXIzHVti5kkpA38V0Ciw1/Sjo5Bu36oZ80wKmqsdbpD8AVHVE1ujvJzLFEPhi2O6iL7Q/8A2R/SogbyzNDb9QraO/0UsAcBW0Od6JS5Axt7XXSA02AJVmMa0eJhcf8AlZXe+8elkTWnve6JgfhvlaFBHwtzXGtkkDwPCBtf4JSKF0jrOIHYJrkCNpAZr8z0RQrKspWEPNzo+65w3Uip4nmxlaD+a4/ZBf4RkfNVMmLMFljUbHC+G0k8xbUzNbp2aJBdy9LTUVJTM0RlovjSwb+vdeGhZLK8RsaXOOy9TwmA07byv1SkWObho7BPFolktGvpDRZl222A6LJr4XsDpzVadAu6+wCdkmaz3rkBYvEKqSW/LYD2JGAnlQsU2CmiZUtBJtIwAFzkDUKLxR5d1zukJ5JLvJIDne9Y7oGou3J+alZZRG31pMj3Nbh99TTkZVfaah8AgMjuWNmkoLMdLrp1XHQJRqCRucGloPzK0aHiU1INLR4NiC7BSA1W1AEDv3XHkkYNymEas9ZR8VgqW8vEUwHg1C7UjxaWsa8NllcA73dG3zxZYUL3YOkkt8v3WhT8Qn5Tmlx5ZGGmzv1CPr+CeKZucPbobrkYZRuCx7b/ACP91J5omRukbJUx5y0xgf3WTSExTamw8odbsuT9VpRVLnu0uifp/wBxttJ9Qcp0I0MwOo33LKkF3UnwlVmjbK12u8ucOaASP0XCBGS5jWE9bY+iq6djbOcA0/52WALuNPG0827i3bUwgn1S0jaV7OYKZ779cBOurYjJyw/mO7abpaWvJB5dOXWNskAFZjKxaCGhkNm+B3Vrj/l0V1JEHEtYw3G990hI93ML3hrDbAYdh8V173DJmHcEHKT0h/LGZY7NtHGdX0QGUrt3usewQzVvsLuc7zsFVsxcfExhd3/wrKSNTQx7O38b/oohcx/l81EdA2YbRZWue6iikXOgkndccDfcqKLGLwyva6wdhWZWSi48PyXFEQEdIXWvY3VC43sMLqiK6B8PQMa2ip4hALOkALnHcpyFxZHcHKiioSZlcSrZ2uFndVlyTySe+8kdlFEjKRRSw3VxsuKJRjt0SPxFtzuoosumlw3ZIY/ZQ0NxYLJkjAa4i91FE7RNMc4c0Cw/EMrQMEZl1aQHEXuAuKJkhJPYZ1O1wJeXOI6lDZg2HRRREWy9bAwsLs39VnUFQ545Tg2wfvbO6iiEholpnOdSTXObjxAZQ3TPZTx6SM2G3oookKBHRNNMxzhqLsG6HUcOpy4kNLTpvcFRRAJjOJik0t+qYjqZNNrNt6KKIBOe0P8Ay/JRRRaw0f/Z",
+//       alt: "Image 1",
+//     },
+//     {
+//       id: 2,
+//       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3pzeOScToo1THYZ3XaQscr67JHUcNd1ymdpKBQS57ekTxHHCS98C2ynQqBYuG9m2Z-RA&usqp=CAU",
+//       alt: "Image 1",
+//     },
+//     {
+//       id: 3,
+//       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB0VI5VmCn2ThvP-rXsBHN36KYMxKHcaBS9rvyTJdXLVPfB5kqF3G5028fzHC7JoKIj7Y&usqp=CAU",
+//       alt: "Image 1",
+//     },
+//   ]);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+//   const [slider, setSlider] = React.useState(image[0])
 
-export default App
+//   let handleChange=(d)=>{
+//     setSlider(d);
+
+//   }
+
+//   return (
+//     <div id="parent">
+//       <img id="slider" src={slider.src} alt={slider.alt} width={500} height={300} />
+//       <div id="image" >
+//         {image.map((d) => {
+//           return (
+//           <div onClick={()=>{handleChange(d)}}>
+//             <img  src={d.src} alt={d.alt}  width={80} height={80}/>
+//           </div>
+//         )
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
